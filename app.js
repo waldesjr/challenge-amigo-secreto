@@ -6,6 +6,7 @@ function adicionarAmigo() {
     
     if (input == '') {
         alert('Por favor, você precisa digitar um nome!');
+        return
     } else {
         amigos.push(input);
         console.log(amigos);
@@ -21,7 +22,7 @@ function limparCampo() {
 
 function exibirLista() {
     let listaAmigos = document.getElementById("listaAmigos");   //acessando o <ul> no HTML pela variavel listaAmigos para criar <li> dentro dela
-    listaAmigos.innerHTML = "";                                 //limpar a lista para nao duplicar a lista
+    listaAmigos.innerHTML = "";                                 //limpar a lista para nao duplicar
     for (let i = 0; i < amigos.length; i++) {
         let nome = document.createElement("li");                    //criando <li> dentro na variavel nome
         nome.textContent = amigos[i];                               //introduzindo no <li> o conteúdo de texto de amigos[i]
@@ -30,26 +31,12 @@ function exibirLista() {
     
 }
 
-// function reiniciarJogo() {
-//     numeroSecreto = gerarNumeroAleatorio();
-//     limparCampo();
-//     tentativas = 1;
-//     exibirMensagemInicial();
-//     document.getElementById('reiniciar').setAttribute('disabled', true)
-// }
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Adicione amigos para sortear!");
+        return;
+    }
 
-// function gerarNumeroAleatorio() {
-//     let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
-//     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
-
-//     if (quantidadeDeElementosNaLista == numeroLimite) {
-//         listaDeNumerosSorteados = [];
-//     }
-//     if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
-//         return gerarNumeroAleatorio();
-//     } else {
-//         listaDeNumerosSorteados.push(numeroEscolhido);
-//         console.log(listaDeNumerosSorteados)
-//         return numeroEscolhido;
-//     }
-// }
+    let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
+    document.getElementById("resultado").innerText = "O amigo sorteado é: " + amigoSorteado;
+}
