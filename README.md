@@ -2,7 +2,7 @@
 <p align="center">
 > :construction: Projeto em construção :construction:
 </p>
-<h2>Objetivo: </h2>Aplicar os conceitos aprendidos durante os cursos de JavaScrip e lógica de programação para tornar funcional um repositório base associado a uma sorteio do amigo secreto.
+<h2>Objetivo: </h2>Aplicar os conceitos aprendidos durante os cursos de JavaScrip e lógica de programação para tornar funcional um repositório base associado a uma sorteio do amigo secreto. O projeto foi desenvolvido em JavaScript, utilizando as liçoes aprendidas no projeto do Jjgo do numero secreto.
 <h3> :hammer: Funcionalidades do projeto</h3>
 <h4> Adiciona ao que for solicitado no Trello, foi implantado:</h4>
 <p>* Funcionalidade para garantir que o sorteando não sorteie a si, sendo necessário informar seu nome ao clicar em sortear:</p>
@@ -17,3 +17,4 @@
 <h3>Será desenvolvido:</h3>
 <p>* Uma forma para que a mensagem na função <strong>sortearAmigo()</strong> seja publicada antes do alert da função <strong>fimDeSorteio()</strong> .</p>
 <p>* Funcionalidade para buscar lista de amigos do WhatsApp e Instagram e importar direto para a aplicação. </p>
+<p>* Melhorar as informações do README.</p>
